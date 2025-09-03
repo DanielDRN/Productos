@@ -205,8 +205,8 @@ a:hover {
     align-items: center;
 }
 #modal-img {
-    max-width: 100%;
-    height: auto;
+    max-width: 70%;
+    height: 70%;
     margin-bottom: 16px;
     border-radius: 4px;
 }
@@ -230,5 +230,6 @@ a:hover {
     font-weight: bold;
 
 }
+
 
 
