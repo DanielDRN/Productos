@@ -1,0 +1,150 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JD Store</title>
+    <link rel="stylesheet" href="{% static 'store/style/style.css' %}">
+    <link rel="icon" href="{% static 'store/img/favicon.ico' %}">
+</head>
+<body>
+
+<h1>Tienda JD Store</h1>
+
+<input type="text" id="buscador" placeholder="Buscar productos...">
+
+<div class="modal" id="modal-detalles" tabindex="-1" aria-hidden="true">
+    <div class="modal-content">
+        <button class="close" aria-label="Cerrar">&times;</button>
+        <div class="modal-header">
+            <h2>Detalles del Producto</h2>
+        </div>
+        <div class="modal-body">
+            <img id="modal-img" src="" alt="Imagen del producto" class="modal-img">
+            <h3 id="modal-nombre"></h3>
+            <p id="modal-precio"></p>
+            <p id="modal-descripcion"></p>
+        </div>
+    </div>
+</div>
+
+<div class="productos">
+    <div class="card">
+        <img src="{% static 'store/img/producto1.jpeg' %}" alt="Auriculares">
+        <h2>Monitores de sonido EDX PRO</h2>
+        <span class="precio">$22.00</span>
+        <a class="boton-whatsapp" href="https://wa.me/584129484054?text=Hola,%20quiero%20comprar%20los%20Monitores%20de%20sonido%20EDX%20PRO." target="_blank">
+            Ir A WhatSapp
+        </a>
+        <button type="button" class="detalles"
+            value="Monitores de sonido"
+            data-img="{% static 'store/img/producto1.jpeg' %}"
+            data-precio="$22.00"
+        >Ver Detalles</button>
+    </div>
+    
+    <div class="card">
+        <img src="{% static 'store/img/producto2.jpeg' %}" alt="Auriculares">
+        <h2>Monitores EDX Lite</h2>
+        <span class="precio">$17.00</span>
+        <a class="boton-whatsapp" href="https://wa.me/584249549341?text=Hola,%20quiero%20comprar%20los%20Monitores%20EDX%20Lite." target="_blank">
+            Ir A WhatSapp
+        </a>
+        <button type="button" class="detalles"
+            value="Monitores EDX Lite"
+            data-img="{% static 'store/img/producto2.jpeg' %}"
+            data-precio="$17.00"
+        >Ver Detalles</button>
+    </div>
+    
+    <div class="card">
+        <img src="{% static 'store/img/descarga3.jpeg' %}" alt="Colonias">
+        <h2>Colonia</h2>
+        <span class="precio">$5.00</span>
+        <a class="boton-whatsapp" href="https://wa.me/584249549341?text=Hola,%20quiero%20comprar%20los%20Colonias." target="_blank">
+            Ir A WhatSapp
+        </a>
+        <button type="button" class="detalles"
+            value="Colonia"
+            data-img="{% static 'store/img/descarga3.jpeg' %}"
+            data-precio="$5.00"
+            data-descripcion="Colonias De Caballeros Y Damas A Base De Aceite Con Feromonas de 30ML Con Variedad A Tu Gusto"
+        >Ver Detalles</button>
+    </div>
+    
+    <div class="card">
+        <img src="{% static 'store/img/cruchect.jpg' %}" alt="crochet">
+        <h2>Crochet</h2>
+        <span class="precio">$1.99</span>
+        <a class="boton-whatsapp" href="https://wa.me/584249549341?text=Hola,%20quiero%20comprar%20productos%20crochet." target="_blank">
+            Ir A WhatSapp
+        </a>
+        <button type="button" class="detalles"
+            value="Crochet"
+            data-img="{% static 'store/img/cruchect.jpg' %}"
+            data-precio="$1.99"
+        >Ver Detalles</button>
+    </div>
+    
+    <div class="card">
+        <img src="{% static 'store/img/auriculares.jpeg' %}" alt="auriculares">
+        <h2>Auriculares</h2>
+        <span class="precio">$10.00</span>
+        <a class="boton-whatsapp" href="https://wa.me/584249549341?text=Hola,%20quiero%20comprar%20los%20Auriculares." target="_blank">
+            Ir A WhatSapp
+        </a>
+        <button type="button" class="detalles"
+            value="Auriculares"
+            data-img="{% static 'store/img/auriculares.jpeg' %}"
+            data-precio="$10.00"
+        >Ver Detalles</button>
+    </div>
+    
+    <div class="card">
+        <img src="{% static 'store/img/limpiador-facial.jpg' %}" alt="limpiador">
+        <h2>Limpiador CeraVE</h2>
+        <span class="precio">$15.99</span>
+        <a class="boton-whatsapp" href="https://wa.me/584249549341?text=Hola,%20quiero%20comprar%20el%20Limpiador%20CeraVE." target="_blank">
+            Ir A WhatSapp
+        </a>
+        <button type="button" class="detalles"
+            value="Limpiador CeraVE"
+            data-img="{% static 'store/img/limpiador-facial.jpg' %}"
+            data-precio="$15.99"
+        >Ver Detalles</button>
+    </div>
+    
+    <div class="card">
+        <img src="{% static 'store/img/chaqueta-hentai.jpg' %}" alt="chaqueta-hentai">
+        <h2>Chaqueta hentai</h2>
+        <span class="precio">$30.99</span>
+        <a class="boton-whatsapp" href="https://wa.me/584249549341?text=Hola,%20quiero%20comprar%20la%20Chaqueta%20hentai." target="_blank">
+            Ir A WhatSapp
+        </a>
+        <button type="button" class="detalles"
+            value="Chaqueta hentai"
+            data-img="{% static 'store/img/chaqueta-hentai.jpg' %}"
+            data-precio="$30.99"
+        >Ver Detalles</button>
+    </div>
+    
+    <div class="card">
+        <img src="{% static 'store/img/llaveros.jpg' %}" alt="llaveros">
+        <h2>llaveros</h2>
+        <span class="precio">$1.99</span>
+        <a class="boton-whatsapp" href="https://wa.me/584249549341?text=Hola,%20quiero%20comprar%20los%20llaveros." target="_blank">
+            Ir A WhatSapp
+        </a>
+        <button type="button" class="detalles"
+            value="llaveros"
+            data-img="{% static 'store/img/llaveros.jpg' %}"
+            data-precio="$1.99"
+        >Ver Detalles</button>
+    </div>
+</div>
+
+<script src="{% static 'store/js/script.js' %}"></script>
+<script src="{% static 'store/js/modales.js' %}"></script>
+</body>
+</html>
