@@ -170,6 +170,7 @@ a:hover {
     padding: 24px;
     max-width: 400px;
     margin: auto;
+    margin-top: 50px;
     box-shadow: 0 4px 16px rgba(0,0,0,0.2);
     position: relative;
     animation: alternateFadeIn 0.3s ease forwards;
@@ -227,4 +228,5 @@ a:hover {
     font-size: 18px;
     text-align: center;
     font-weight: bold;
+
 }
