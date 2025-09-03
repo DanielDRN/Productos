@@ -29,3 +29,20 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const buscador = document.getElementById('buscador');
+    const cards = document.querySelectorAll('.productos .card');
+
+    buscador.addEventListener('input', function() {
+        const texto = buscador.value.toLowerCase();
+        cards.forEach(card => {
+            const nombre = card.querySelector('h2');
+            if (nombre && nombre.textContent.toLowerCase().includes(texto)) {
+                card.style.display = '';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    });
+});
