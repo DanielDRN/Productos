@@ -231,5 +231,13 @@ a:hover {
 
 }
 
-
+footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
 
