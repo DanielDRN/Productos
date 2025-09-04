@@ -62,3 +62,12 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+
+// logica para el boton para ir arriba
+document.addEventListener('scroll', function() {
+    document.getElementById('ir-arriba').style.display = window.scrollY > 200 ? 'block' : 'none';
+});
+document.getElementById('ir-arriba').onclick = function() {
+    window.scrollTo({top:0, behavior:'smooth'});
+};
