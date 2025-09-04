@@ -241,3 +241,13 @@ footer {
     width: 100%;
 }
 
+#no-results {
+    color: #fff;
+    font-weight: bold;
+    font-size: 3rem;
+    text-shadow: #000 0px 0px 10px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+
