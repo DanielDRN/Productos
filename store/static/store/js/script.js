@@ -44,5 +44,21 @@ document.addEventListener('DOMContentLoaded', function() {
                 card.style.display = 'none';
             }
         });
+
+        // condicion por si el buscador no encuentra nada pero arriba del footer
+        const noResults = Array.from(cards).every(card => card.style.display === 'none');
+        let noResultsDiv = document.getElementById('no-results');
+        if (noResults) {
+            if (!noResultsDiv) {
+                noResultsDiv = document.createElement('div');
+                noResultsDiv.id = 'no-results';
+                noResultsDiv.textContent = 'No se encontraron productos.';
+                document.querySelector('.productos').appendChild(noResultsDiv);
+            }
+        } else {
+            if (noResultsDiv) {
+                noResultsDiv.remove();
+            }
+        }
     });
 });
